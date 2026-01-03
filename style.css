@@ -3,3 +3,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  /* backgrounds */
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --bg-card-hover: #334155;
+
+  /* Text */
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+
+  /* Accents */
+  --accent-primary: #818cf8;
+  --accent-success: #10b981;
+  --accent-danger: #ef4444;
+
+  /* Borders & Shadows  */
+  --border: 1px solid rgba(255, 255, 255, 0.1);
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: "Inter", sans-serif;
+  padding: 40px;
+}
