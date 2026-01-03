@@ -8,25 +8,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>
-        <i data-lucide="book"></i>
-        Library
-      </h1>
-      <button>Add +</button>
-    </header>
-    <hr />
-    <main>
-      <div class="card">
-        <img src="" alt="Avatar" style="width: 100%" />
-        <div class="container">
-          <h4>Title: Time Mangement</h4>
-          <p>By Bryan Tracy</p>
-          <p>page: 324</p>
-          <p>read</p>
-        </div>
+    <header class="main-header">
+      <div class="logo">
+        <h1>
+          <i data-lucide="book"></i>
+          Library
+        </h1>
       </div>
+      <button class="btn-primary" id="add-book-btn">Add Book +</button>
+    </header>
+
+    <main class="library-grid" id="library-display">
+      <article class="card-featured">
+        <div class="card-content">
+          <span class="badge">Currently Reading</span>
+          <h2 class="book-title">Time Management</h2>
+          <p class="book-author">by Brian Tracy</p>
+          <div class="card-footer">
+            <p class="pages">324 pages</p>
+            <button class="status-toggle Reading">Read</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-content">
+          <h2 class="book-title">Atomic Habits</h2>
+          <p class="book-author">by James clear</p>
+          <button class="status-toggle unread">Unread</button>
+        </div>
+      </article>
     </main>
+
+    <dialog id="book-modal"></dialog>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./app.js"></script>
   </body>
