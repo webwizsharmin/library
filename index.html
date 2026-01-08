@@ -9,17 +9,20 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="logo">
-        <h1>
+      <div class="container header-content">
+        <div class="logo">
           <i data-lucide="book"></i>
-          Library
-        </h1>
+          <h1>Library</h1>
+        </div>
+        <button class="btn-primary" id="add-book-btn">
+          <i data-lucide="plus"></i>
+          <span>Add Book</span>
+        </button>
       </div>
-      <button class="btn-primary" id="add-book-btn">Add Book +</button>
     </header>
 
     <main class="library-grid" id="library-display">
-      <article class="card-featured">
+      <article class="card-featured card">
         <div class="card-content">
           <span class="badge">Currently Reading</span>
           <h2 class="book-title">Time Management</h2>
