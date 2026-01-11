@@ -69,11 +69,18 @@ function displayBooks() {
     // We use a Template Literal to keep the HTML readable
     bookCard.innerHTML = `
       <div class="card-content">
-        ${
-          book.isRead
-            ? '<span class="badge">Finished</span>'
-            : '<span class="badge" style="background: rgba(148, 163, 184, 0.1); color: var(--text-muted);">Unread</span>'
-        }
+        <div class="card-header">
+          ${
+            book.isRead
+              ? '<span class="badge">Finished</span>'
+              : '<span class="badge" style="background: rgba(148, 163, 184, 0.1); color: var(--text-muted);">Unread</span>'
+          }
+          <button id="deleteBook" class="btn-delete" onclick="deleteBook('${
+            book.id
+          }')" title="Delete Book"> 
+          <i data-lucide="trash-2"></i>
+          </button>
+        </div>
         <h2 class="book-title">${book.title}</h2>
         <p class="book-author">by ${book.author}</p>
         <div class="card-footer">
@@ -86,6 +93,7 @@ function displayBooks() {
       </div>
     `;
     libraryDisplay.appendChild(bookCard);
+    lucide.createIcons();
   });
 }
 
@@ -122,3 +130,9 @@ function toggleReadStatus(id) {
 
 //  Initial call to show default books
 displayBooks();
+
+window.deleteBook = function (id) {
+  myLibrary = myLibrary.filter((book) => book.id !== id);
+
+  displayBooks();
+};
