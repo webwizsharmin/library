@@ -119,6 +119,40 @@ body {
   overflow: hidden;
 }
 
+/* Delete Button  */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  margin-bottom: 0;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  opacity: 0.6;
+}
+
+.btn-delete:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--accent-danger);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.btn-delete i {
+  width: 18px;
+  height: 18px;
+}
 /* Subtle gradient overlay for a premium look */
 .card::before {
   content: "";
