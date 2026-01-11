@@ -206,6 +206,7 @@ body {
   background-color: var(--bg-card);
   color: var(--text-main);
   padding: 0;
+  margin: auto;
   max-width: 450px;
   width: 90%;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
