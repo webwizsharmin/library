@@ -52,7 +52,7 @@ let myLibrary = [
   new Book("Think and Grow Rich", "Nepoleon Hill", 315, true),
 ];
 
-console.log(myLibrary);
+// console.log(myLibrary);
 
 // Rendering the logic
 const libraryDisplay = document.getElementById("library-display");

@@ -153,6 +153,7 @@ body {
   width: 18px;
   height: 18px;
 }
+
 /* Subtle gradient overlay for a premium look */
 .card::before {
   content: "";
