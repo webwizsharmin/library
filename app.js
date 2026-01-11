@@ -34,7 +34,7 @@ bookForm.addEventListener("submit", (e) => {
   };
 
   console.log("New Book Captured:", newBook);
-  bookForm.reset();
+  // bookForm.reset();
 });
 
 function Book(title, author, pages, isRead) {
@@ -58,6 +58,7 @@ console.log(myLibrary);
 const libraryDisplay = document.getElementById("library-display");
 
 function displayBooks() {
+  // console.table(myLibrary);
   // Clear the grid first to avoid duplicates
   libraryDisplay.innerHTML = "";
 
@@ -93,13 +94,13 @@ bookForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   // 1. Capture Data
-  const title = document.getElementById("title").value;
-  const author = document.getElementById("author").value;
-  const pages = document.getElementById("pages").value;
-  const isRead = document.getElementById("isRead").value;
+  const titleVal = document.getElementById("title").value;
+  const authorVal = document.getElementById("author").value;
+  const pagesVal = document.getElementById("pages").value;
+  const isReadVal = document.getElementById("isRead").value;
 
   //  2. Create new object and add to array
-  const newBook = new Book(title, author, pages, isRead);
+  const newBook = new Book(titleVal, authorVal, pagesVal, isReadVal);
   myLibrary.push(newBook);
 
   // 3. Update UI
